@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:37:35 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 15:18:22 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/04 16:46:20 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,22 @@
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _pv(10),
 	 _pe(10), _damage(0){
-	std::cout << "constructor called" << std::endl;
+	std::cout << "ClapTrap constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name, unsigned int pv, unsigned int pe, unsigned int damage) : _name(name), _pv(pv),
+	 _pe(pe), _damage(damage){
 }
 
 ClapTrap::ClapTrap( ClapTrap &toCopy )
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap Copy constructor called" << std::endl;
 	*this = toCopy;
 	return;
 }
 
 ClapTrap::~ClapTrap(){
-	std::cout << "destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 ClapTrap	&ClapTrap::operator=(ClapTrap &toCopy){
