@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 14:31:16 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 17:39:01 by sleon            ###   ########.fr       */
+/*   Created: 2023/05/04 13:16:47 by sleon             #+#    #+#             */
+/*   Updated: 2023/05/04 17:02:24 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-# include "ClapTrap.hpp"
+int	main(){
+	ClapTrap	Manuel("Manuel");
 
-class	ScavTrap : public ClapTrap{
-	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		ScavTrap(ScavTrap &toCopy );
-		~ScavTrap();
-		void guardGate();
+	Manuel.attack("Naelle");
+	Manuel.takeDamage(5);
+	Manuel.beRepaired(2);
 
-		ScavTrap	&operator=( ScavTrap &other );
-};
+	FragTrap	Naelle("Naelle");
 
-#endif
+	Naelle.attack("Manuel");
+	Naelle.takeDamage(54);
+	Naelle.beRepaired(12);
+	Naelle.highFivesGuys();
+}

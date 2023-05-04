@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:31:16 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 17:39:01 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/04 17:46:18 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap{
+class	FragTrap : public ClapTrap{
 	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		ScavTrap(ScavTrap &toCopy );
-		~ScavTrap();
-		void guardGate();
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(FragTrap &toCopy );
+		~FragTrap();
+		void highFivesGuys(void);
 
-		ScavTrap	&operator=( ScavTrap &other );
+		FragTrap	&operator=( FragTrap &other );
 };
 
 #endif

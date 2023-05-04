@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:33:17 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 17:38:49 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/04 17:41:25 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20){
-	std::cout << "ScavTrap constructor called" << std::endl;
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30){
+	std::cout << "FragTrap constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap() : ClapTrap("Default", 100, 50, 20){
-	std::cout << "ScavTrap constructor called" << std::endl;
+FragTrap::FragTrap() : ClapTrap("Default", 100, 100, 30){
+	std::cout << "FragTrap default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap &toCopy) : ClapTrap(toCopy._name, toCopy._pv,
+FragTrap::FragTrap(FragTrap &toCopy) : ClapTrap(toCopy._name, toCopy._pv,
 	toCopy._pe, toCopy._damage)
 {
 	std::cout << "Copy constructor called" << std::endl;
@@ -28,11 +28,11 @@ ScavTrap::ScavTrap(ScavTrap &toCopy) : ClapTrap(toCopy._name, toCopy._pv,
 	return;
 }
 
-ScavTrap::~ScavTrap(){
-	std::cout << "ScavTrap destructor called" << std::endl;
+FragTrap::~FragTrap(){
+	std::cout << "FragTrap destructor called" << std::endl;
 }
 
-ScavTrap	&ScavTrap::operator=(ScavTrap &toCopy){
+FragTrap	&FragTrap::operator=(FragTrap &toCopy){
 	this->_name = toCopy._name;
 	this->_pv = toCopy._pv;
 	this->_pe = toCopy._pe;
@@ -40,11 +40,11 @@ ScavTrap	&ScavTrap::operator=(ScavTrap &toCopy){
 	return(*this);
 }
 
-void	ScavTrap::guardGate(){
-	if (_pe > 10)
+void	FragTrap::highFivesGuys(){
+	if (_pe > 20)
 	{
-		this->_pe -= 10;
-		std::cout << this->_name << " enters in Gate Keeper mode ";
+		this->_pe -= 20;
+		std::cout << this->_name << " raises his hand in wait for a high fives";
 		std::cout << std::endl;
 		std::cout << "He now has " << this->_pe << " point of energy" << std::endl;
 		std::cout << std::endl;
