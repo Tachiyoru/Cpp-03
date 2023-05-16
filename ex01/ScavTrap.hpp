@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:31:16 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 17:39:01 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/16 12:48:50 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap{
+class	ScavTrap : virtual public ClapTrap{
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);

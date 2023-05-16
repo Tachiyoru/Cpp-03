@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:16:47 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 14:52:26 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/16 12:44:01 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	main(){
 	ClapTrap	Manuel("Manuel");
 	Manuel.attack("Naelle");
 	Manuel.takeDamage(5);
-	Manuel.beRepaired(-2);
+	Manuel.beRepaired(2);
 }

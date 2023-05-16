@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:21 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 17:33:12 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/16 12:51:50 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	ClapTrap{
 		ClapTrap(std::string name);
 		ClapTrap( ClapTrap &src );
 		ClapTrap(std::string name, unsigned int pv, unsigned int pe, unsigned int damage);
-		~ClapTrap();
+		virtual ~ClapTrap();
 
 		ClapTrap	&operator=( ClapTrap &other );
 
