@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:35:12 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 18:57:27 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/23 17:21:16 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,6 @@ DiamondTrap	&DiamondTrap::operator=(DiamondTrap &toCopy){
 	this->_pe = toCopy._pe;
 	this->_damage = toCopy._damage;
 	return(*this);
-}
-
-void	DiamondTrap::attack(std::string target)
-{
-	this->ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI()

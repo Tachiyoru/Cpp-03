@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:08:12 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 18:57:20 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/23 17:17:36 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class	DiamondTrap : public ScavTrap, public FragTrap
 		~DiamondTrap();
 
 		DiamondTrap	&operator=( DiamondTrap &diamondtrap );
-		void	attack(std::string target);
+
+		using	ScavTrap::attack;
 		void	whoAmI();
 };
 

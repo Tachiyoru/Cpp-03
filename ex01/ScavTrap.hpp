@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:31:16 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/16 12:48:50 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/23 17:08:02 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ class	ScavTrap : virtual public ClapTrap{
 		ScavTrap(std::string name);
 		ScavTrap(ScavTrap &toCopy );
 		~ScavTrap();
-		void guardGate();
 
 		ScavTrap	&operator=( ScavTrap &other );
+
+		void		attack(const std::string &target);
+		void		guardGate();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:33:17 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/04 18:35:32 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/23 17:20:09 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,19 @@ ScavTrap	&ScavTrap::operator=(ScavTrap &toCopy){
 	this->_pe = toCopy._pe;
 	this->_damage = toCopy._damage;
 	return(*this);
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (_pe > 0 && _pe > 0)
+	{
+		this->_pe--;
+		std::cout << this->_name << " attack in Scavtrap style " << target
+			<< " causing " << this->_damage << " points of damage! (still tra"
+			"sh)" << std::endl;
+	}
+	else
+		std::cout << _name << " not enough energy to attack " << target << std::endl;
 }
 
 void	ScavTrap::guardGate(){
