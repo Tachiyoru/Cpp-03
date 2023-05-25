@@ -6,7 +6,7 @@
 /*   By: sleon <sleon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:16:47 by sleon             #+#    #+#             */
-/*   Updated: 2023/05/05 14:15:34 by sleon            ###   ########.fr       */
+/*   Updated: 2023/05/25 11:25:40 by sleon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 int	main(){
 	ClapTrap	Manuel("Manuel");
 
+	std::cout<<std::endl;
 	Manuel.attack("Naelle");
 	Manuel.takeDamage(5);
 	Manuel.beRepaired(2);
 
 	FragTrap	Naelle("Naelle");
 
+	std::cout<<std::endl;
 	Naelle.attack("Manuel");
 	Naelle.takeDamage(54);
 	Naelle.beRepaired(12);
@@ -31,6 +33,7 @@ int	main(){
 
 	ScavTrap	Clem("Clem");
 
+	std::cout<<std::endl;
 	Clem.attack("Manuel");
 	Clem.takeDamage(2);
 	Clem.beRepaired(1);
@@ -38,6 +41,7 @@ int	main(){
 
 	DiamondTrap	Shanley("Shanley");
 
+	std::cout<<std::endl;
 	Shanley.attack("Manuel");
 	Shanley.takeDamage(2);
 	Shanley.beRepaired(1);
